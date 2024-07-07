@@ -1,0 +1,100 @@
+<!-- billing/templates/billing/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}GST Billing{% endblock %}</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/nav.css'%}">
+    <link rel="stylesheet" href="{% static 'css/indexStylesPage.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script defer src="{% static 'css/App.js'%}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+MX:wght@100..400&family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+MX:wght@100..400&family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
+   
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-header"> <a class="navbar-brand" href="{% url 'home' %}">GST Billing</a>
+            <button class="nav-toggle"><i class="fa-solid fa-bars"></i> </button>
+        </div>
+
+        <ul class="links">
+            <li>
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+
+
+            <li>
+                <a href="{% url 'product_index' %}">Products Details</a>
+            </li>
+            <li>
+                <a href="{% url 'cdetails' %}">Customers Details</a>
+            </li>
+
+            <li>
+                <a href="{% url 'create_invoice' %}">Create Invoice</a>
+            </li>
+            <li>
+                <a href="{% url 'invoice_list' %}">Invoice List</a>
+            </li>
+            <li>
+                <a href="{% url 'gstNewsUpdates'%}">Get News Updates</a>
+                <li><a href="{%url 'login'%}">Logout</a> </li>
+            </li>
+
+            <!-- <li>
+                {% if request.user.is_authenticated %}
+
+                <a href="{%url 'login'%}">Logout</a> {% endif %}
+                
+                 <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'signup' %}">Signup</a> 
+
+                <h1>Welcome!</h1>
+                <p>{{ request.user.username }}</p>
+            </li> -->
+        </ul>
+        </div>
+        
+    </nav>
+
+    <main>
+
+    <div class="Features-of-GST">
+
+        <h3>Features of GST: Top 10 Features of Goods and Services Tax in India</h3>
+
+        <p>The Goods and Services Tax (GST) is a nationwide indirect tax levied on businesses with the goal of making India a unified market. It is a single tax applied on the product life cycle of goods and services. There are three types of GST — central GST (CGST), state GST (SGST), and integrated GST (IGST). </p>
+
+        <div class="btn-1"><button><a href="https://cleartax.in/s/features-of-gst"> Click Me To See</a></button></div>
+
+        <div class="Official-link">
+
+            <h3>If You Want To Know More About GST Check Government Official Site</h3>
+            <p>The Goods and Services Tax (GST) is an indirect federal sales tax. It is a comprehensive, multistage, destination-based tax that has subsumed almost all the indirect taxes except a few state taxes. GST is a tax that we need to pay on supply of goods & services. It is based on the “Destination principle” and is applied on goods and services at the place where final/actual consumption happens. GST is expected to replace a myriad of indirect taxes such as VAT, customs duty, Excise, CST, Service Tax, Entertainment Tax with a single tax called the Goods and Services Tax</p>
+         
+        </div>
+        <div class="btn-2">
+            <button><a href="https://www.gst.gov.in/">To See Click Me</a></button>
+        </div>
+      
+    </div>
+
+    
+</main>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'css/productStylesPage.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Patrick+Hand&family=Satisfy&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Marck+Script&family=Patrick+Hand&family=Satisfy&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Macondo&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button class="button">
+        <a href="{% url 'home' %}">Go To Home Page</a></button>
+    <div class="header">
+        <h2>Add Product</h2>
+    </div>
+    <form action="productDetails" method="POST">
+        {% csrf_token %}
+        <!-- <label for="product_no">Count</label>
+        <input type="text" name="product_no" placeholder="Count"> -->
+        <label for="product_name">Product Name</label>
+        <input type="text" name="product_name" placeholder="Product Name">
+        <label for="product_quantity">Product Quantity</label>
+        <input type="text" name="product_quantity" placeholder="Quantity">
+        <label for="product_price">Product Price</label>
+        <input type="text" name="product_price" placeholder="Price">
+        <label for="product_discount">Product Discount</label>
+        <input type="text" name="product_discount" placeholder="Discount">
+        <label for="product_gst">GST Amount</label>
+
+        <input type="text" name="product_gst" placeholder="GST">
+        <input class="submit" type="submit">
+        
+        </div>
+    </form>
+    <div class="fetch-datas">
+        <h3 class="header">Product Records</h3>
+        {% for i in data %}
+            <table>
+                <tr>
+                    <th class="Th">ID</th>
+                    <th class="Th">Product Name</th>
+
+                    <th class="Th">Product Quantity</th>
+
+                    <th class="Th">Product Price</th>
+
+                    <th class="Th">Product Discount</th>
+
+                    <th class="Th">GST Amount</th>
+                    <th class="Th">Delete</th>
+
+                </tr>
+
+
+                <tr>
+                    <td class="Td">{{i.id}}</td>
+                    <td class="Td">{{i.product_name}}</td>
+                    <td class="Td">{{i.product_quantity}}</td>
+                    <td class="Td">{{i.product_price}}</td>
+                    <td class="Td">{{i.product_discount}}</td>
+                    <td class="Td">{{i.product_gst}}</td>
+                    <td class="Td" style="background-color: red;"><button class="btn">
+                        <a  href="{% url 'delete_product' i.id %}">Delete</a></button></td>
+
+
+                </tr>
+
+
+            </table>
+
+     {% endfor %}
+    </div>
+</body>
+
+</html>

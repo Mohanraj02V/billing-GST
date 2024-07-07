@@ -1,0 +1,134 @@
+:root {
+    --ff-secondary: "Open Sans", sans-serif;
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-white: #fff;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --clr-primary-5: hsl(205, 78%, 60%);
+    --transition: all 0.3s linear;
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --spacing: 0.1rem;
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-secondary);
+    background: var(--clr-grey-10);
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+    /* display: flex; */
+    padding: 20px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 20px;
+    line-height: 4em;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    color: var(--clr-primary-5);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: var(--clr-primary-1);
+    transform: rotate(90deg);
+}
+
+.links a {
+    color: var(--clr-grey-3);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.links a:hover {
+    background: var(--clr-primary-8);
+    color: var(--clr-primary-5);
+    padding-left: 1.5rem;
+}
+
+.links {
+    height: 0;
+    overflow-y: scroll;
+    transition: var(--transition);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+.show-links {
+    height: 10rem;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-center {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .nav-header {
+        padding: 0;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .links {
+        height: auto;
+        display: flex;
+    }
+    .links a {
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+    .links a:hover {
+        padding: 0;
+        background: transparent;
+    }
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

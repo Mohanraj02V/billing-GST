@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/customerstylesPage.css' %}">
+    <script defer src="{% static 'css/App.js'%}"></script>
+
+</head>
+
+<body>
+
+    <h3 class="heading">Customer Details <a href="{% url 'home' %}">Home</a></h3>
+    <div class="main">
+        <form action="customersDatas" method="POST">
+            {%csrf_token%}
+            <label for="CustomerName">Customer Name</label>
+            <input type="text" name="CustomerName" placeholder="Customer Name">
+            <label for="CustomerAddress">Customer District</label>
+            <input type="text" name="CustomerAddress" placeholder="Customer Address">
+            <label for="CustomerMobileNumber">Customer Mobile Number</label>
+            <input type="text" name="CustomerMobileNumber" placeholder="Customer Mobile Number">
+            <label for="CustomerGST">Customer GST</label>
+            <input type="text" name="CustomerGST" placeholder="Customer GST">
+            <input class="submit" type="submit">
+
+        </form>
+    </div>
+
+    <div class="customersDatas">
+        {%for i in c_details%}
+            <table>
+                <tr>
+                    <th class="Th">ID</th>
+
+                    <th class="Th">Customer Name</th>
+
+                    <th class="Th">Customer Address</th>
+
+                    <th class="Th">Mobile Number</th>
+
+                    <th class="Th">Customer GST</th>
+                    <th class="Th">Delete</th>
+
+
+
+                </tr>
+
+                <tr>
+                    <td class="Td ">{{i.id}}</td>
+                    <td class="Td ">{{i.CustomerName}}</td>
+                    <td class="Td ">{{i.CustomerAddress}}</td>
+                    <td class="Td ">{{i.CustomerMobileNumber}}</td>
+                    <td class="Td ">{{i.CustomerGST}}</td>
+                    <td class="Td " style="background-color: red;"><button class="btn"><a href="{% url 'Customer_delete' i.id %}">Delete</a></button></td>
+                </tr>
+
+
+            </table>
+
+        </div>
+    </div> {%endfor%}
+    </div>
+
+
+</body>
+
+</html>

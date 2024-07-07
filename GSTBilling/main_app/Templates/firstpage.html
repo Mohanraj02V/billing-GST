@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/firstStyles.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="main">
+
+        <h1>GST Billing Made Easy <br> For Your Buisness!</h1>
+
+        <button><a href="{%url 'login'%}">Login</a></button>
+        <button ><a href="{%url 'signup'%}">signup</a></button>
+
+    </div>
+
+</body>
+
+</html>

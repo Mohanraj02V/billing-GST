@@ -1,0 +1,77 @@
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+    background-image: url("img/Main-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.main {
+    margin-top: 13em;
+    margin-left: 5em;
+    text-align: justify;
+}
+.main h1{
+    font-family: "Playwrite IT Moderna", cursive;
+    font-weight: 400;
+}
+
+div.main button {
+    margin-left: 2em;
+    padding: 8px;
+    border-radius: 5px;
+    background:#fff;
+    border:1px solid #dae1f1;
+    
+}
+
+div.main button a {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    color:black;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    
+}
+
+div.main button a:hover {
+    text-decoration: underline;
+}
+
+div.main .login {
+    margin-left: 39px;
+}
+
+
+@media (max-width: 768px) {
+
+
+    div.main{
+        font-size: 12px;
+        margin: 20rem 9.7rem;
+    }
+
+    div.main button{
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+
+    div.main{
+        font-size: 10px;
+        margin: 20rem 7.7rem;
+    }
+
+    div.main button{
+        margin: 0;
+    }
+
+}

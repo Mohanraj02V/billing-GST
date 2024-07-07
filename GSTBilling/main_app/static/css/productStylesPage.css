@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-left: 2px;
+}
+
+body {
+    background-image: url(img/product-bac-3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+    margin: 20px;
+    margin-left: 5px;
+    font-family: "Patrick Hand", cursive;
+}
+
+form input {
+    width: 9%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background: #fff;
+    color: #545d7a;
+    border: 1px solid #dae1f1;
+}
+
+form label {
+    margin: 5px;
+    font-family: "Macondo", cursive;
+}
+
+.submit {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 42rem;
+    padding: 10px;
+}
+
+
+
+table,
+td,
+tr,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+
+}
+
+table {
+    background: #f0bf54;
+    width: 90%;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+
+.btn {
+    text-align: center;
+}
+
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 0;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 1200px){
+    form label{
+        display: block;
+    }
+    form input{
+        width: 25%;
+    }
+
+    table{
+        width: 98%;
+        margin-top: 10px;
+    }
+    .submit{
+        margin: 1.5rem 0;
+        width: 30%;
+    }
+
+    
+}
+@media screen and (max-width: 768px){
+    form label{
+        display: block;
+    }
+    form input{
+        width: 50%;
+    }
+    form{
+        margin-left: 9rem;
+    }
+    table{
+        width: 98%;
+        margin-top: 10px;
+    }
+    .submit{
+        margin: 1.5rem 3.5rem;
+        width: 30%;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 500px){
+    form label{
+        display: block;
+    }
+    form input{
+        width: 70%;
+        /* text-align: center; */
+    }
+    form{
+        margin-left: 8rem;
+
+    }
+    table{
+        width: 90%;
+        margin-top: 10px;
+    }
+    .submit{
+        margin: 1.5rem 4.6rem;
+        width: 35%;
+    }
+
+    
+}

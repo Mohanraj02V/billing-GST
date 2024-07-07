@@ -1,0 +1,134 @@
+body{
+   background-image: url(img/backround.png);
+   background-attachment: fixed;
+   background-size: cover;
+   /* backdrop-filter: blur(2px); */
+}
+
+main{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 50%;
+    margin-left: 2em;
+    color:black;
+    font-size: 18px;
+   
+}
+main div.Features-of-GST h3{
+    /* font-family: "Playwrite MX", cursive; */
+    font-weight: 700;
+    font-family: "Merriweather Sans", sans-serif;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+main div.Features-of-GST button{
+    padding: 10px;
+    margin: 1em 20em;
+    border-radius: 5px;
+    font-family: "Merriweather Sans", sans-serif;
+    border: 1px solid #dae1f1;
+    background: blue;
+
+}
+main div.Features-of-GST button a{
+    color:white;
+    
+   
+}
+main div.Features-of-GST button a:hover{
+    color:black;
+}
+main div.Features-of-GST button:hover{
+    background: white;
+    
+
+
+    
+}
+main div.Official-link h3{
+    font-family: "Merriweather Sans", sans-serif;
+    margin: 1em 0em;
+    
+}
+
+main p{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1200px){
+    main{
+        margin-top: 1em;
+    }
+    main div.Features-of-GST h3 {
+        width: 110%;
+        margin: 0 3em;
+    }
+    main div.Features-of-GST p {
+        width: 110%;
+        margin: 1em 4rem;
+        
+    }
+    main div.Features-of-GST button {
+        width: 12em;
+        margin-right: 4em;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    main{
+        margin-top: 1em;
+    }
+    main div.Features-of-GST h3 {
+        width: 110%;
+        margin: 0 3em;
+    }
+    main div.Features-of-GST p {
+        width: 110%;
+        margin: 1em 4rem;
+        
+    }
+    main div.Features-of-GST button {
+        width: 12em;
+        margin-right: 4em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    main{
+        margin-top: 0;
+    }
+
+    main div.Features-of-GST h3{
+       /* font-family: "Playwrite MX", cursive; */
+       font-weight: 700;
+       margin-bottom: 2px;
+       text-align: justify;
+       margin-left:5.3rem ;
+       margin-bottom: 1em;
+       font-size: 16px;
+       margin-top: 1em;
+       width: 100%;
+   }
+   main div.Features-of-GST p{
+       margin-bottom: 2px;
+       text-align: justify;
+       /* border: 1px solid black; */
+       width: 100%;
+       margin: 0 5.5rem;
+       font-size: 14px;
+   }
+   main div.Features-of-GST button {
+       width: 10em;
+       margin-right: 6em;
+   }
+
+}

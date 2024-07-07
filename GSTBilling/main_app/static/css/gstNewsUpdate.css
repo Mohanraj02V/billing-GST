@@ -1,0 +1,134 @@
+body{
+
+    background: url(img/newsBac.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+div.marquee{
+    font-size: 25px;
+    margin: 20px 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-top: 15px;
+    font-family: "Teachers", sans-serif;
+}
+p.link a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Caveat", cursive;
+    color: black;
+    font-weight: 700;
+}
+section.container{
+    display: flex;
+    text-align: justify;
+   
+    
+}
+div.side-head{
+    margin-top: 4em;
+    border: 1px solid  #dae1f1;
+    padding: 10px;
+    height: 400px;
+    padding-top: 10em;
+    width: 25%;
+    border-radius: 5px;
+    
+    
+}
+div.side-head h3 {
+    
+    line-height: 50px;
+    text-align: center;
+    font-family: "News Cycle", sans-serif;
+
+}
+
+div.content-one{
+    margin: 4em 2em;
+    border: 1px solid  #dae1f1;
+    padding: 20px;
+
+}
+div.content-one h1.Highlights{
+    font-family: "Newsreader", serif;
+
+}
+div.content-one h2.Highlights{
+
+    font-family: "News Cycle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+div.content-one ul li{
+    line-height: 25px;
+    margin: 15px 0;
+}
+div.content-one ul li b{
+    font-family: "News Cycle", sans-serif;
+    margin-right: 10px;
+    color: blue;
+}
+div.content-one ul li{
+    font-family: "Inconsolata", monospace;
+    font-weight: 700;
+}
+section.container-Two{
+    display: flex;
+    text-align: justify;
+}
+section.container-Two div.side-heading{
+    margin-top: 4em;
+    border: 1px solid  #dae1f1;
+    padding: 10px;
+    height: 400px;
+    padding-top: 10em;
+    width: 25%;
+    border-radius: 5px;
+    font-family: "News Cycle", sans-serif;
+}
+
+section.container-Two div.side-heading h3{
+    line-height: 50px;
+    text-align: center;
+    font-family: "News Cycle", sans-serif;
+
+}
+
+section div.expectation{
+    margin: 4em 2em;
+    border: 1px solid  #dae1f1;
+    padding: 20px;
+}
+
+section div.expectation h1{
+    font-family: "Newsreader", serif;
+}
+
+section div.expectation h2{
+    font-family: "News Cycle", sans-serif;
+    margin-right: 10px;
+    color:blue;
+}
+
+section div.expectation p{
+    font-family: "Inconsolata", monospace;
+    font-weight: 700;
+}
+
+section.image{
+    background: url(img/councilMeeting.png);
+    width: 65%;
+    height: 300px;
+    border: 1px solid black;
+    background-size: cover;
+    margin: 0 15em;
+    background-repeat: no-repeat;
+}
+
+
+
+
+

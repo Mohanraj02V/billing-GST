@@ -1,0 +1,88 @@
+    * {
+        padding: 0;
+        margin: 5px;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(img/invoiceList.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    .from {
+        padding-left: 30px;
+        font-size: 10px;
+    }
+    
+    .to {
+        padding-left: 30px;
+        font-size: 10px;
+        float: right;
+    }
+    
+    .invoice {
+        margin: 10px 0;
+        font-size: 15px;
+        padding: 5px;
+    }
+    
+    .heading {
+        text-align: center;
+    }
+    
+    .recipt {
+        border: 1px solid black;
+        margin: 15px 0;
+        padding: 25px 0;
+        background-color: ghostwhite;
+        color: black;
+        font-family: "Inconsolata", monospace;
+        font-optical-sizing: auto;
+        border-radius: 10px;
+    }
+    
+    .back a {
+        text-decoration: none;
+        color: white;
+        margin-right: 20px;
+        background-attachment: fixed;
+        margin-top: 3em;
+        font-family: "Patrick Hand", cursive;
+    }
+    
+    .back a:hover {
+        text-decoration: underline;
+    }
+    
+    .sign {
+        float: right;
+        /* margin: 10px 0; */
+        padding-top: 7px;
+    }
+    
+    .invoice table,
+    td,
+    tr,
+    th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+        line-height: 10px;
+    }
+    
+    .print-button {
+        padding: 10px;
+        border-radius: 10px;
+        /* background-color: aliceblue; */
+        border: 2px solid black;
+        color: #fff;
+        background: purple;
+        font-family: "Patrick Hand", cursive;
+    }
+    
+    .print-button:hover {
+        width: 125px;
+    }

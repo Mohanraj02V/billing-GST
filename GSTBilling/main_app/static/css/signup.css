@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("img/login-img-3.jpg");
+    background-size: cover;
+    backdrop-filter: blur(0px);
+    overflow: hidden;
+}
+
+.box_1 {
+    padding: 2px;
+    background-color: transparent;
+    border-radius: 10px;
+    /* width: 25%; */
+    background-color: ghostwhite;
+}
+
+.box_2 {
+    padding: 70px;
+    background-color: transparent;
+    border-radius: 10px;
+    /* line-height: 40px; */
+}
+
+form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+form input {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #dae1f1;
+    background: #fff;
+    color: #545d7a;
+    width: 50%;
+}
+
+form button {
+    border-radius: 5px;
+    background: #10182f;
+    color: #fff;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    padding: 10px 68px;
+    border: none;
+    margin-top: 30px;
+}
+
+form .signup-link {
+    color: #10182f;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+}
+
+.box_2 form * {
+    display: block;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width:768px) {
+    
+    .box_1{
+
+        padding: 20px;
+        width: 60%;
+        height: 700px;
+    }
+
+    .box_2{
+        padding: 20px;
+    }
+    form input{
+        padding: 10px;
+    }
+    
+}
+@media screen and (max-width:500px) {
+    
+    .box_1{
+
+        padding: 20px;
+        width: 60%;
+        height: 700px;
+    }
+
+    .box_2{
+        padding: 20px;
+    }
+    form input{
+        padding: 10px;
+    }
+    
+}

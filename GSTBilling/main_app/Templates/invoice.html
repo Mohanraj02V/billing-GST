@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'css/invoicestyle.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Patrick+Hand&family=Satisfy&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main>
+        <div class="back">
+            <h4 class="back">
+                <a href="{% url 'home' %}">Go Home</a>
+            </h4>
+
+            <div id="contentToPrint">
+                {% for i in invoiceDetails %}
+                <div class="recipt" id="recipt-{{ forloop.counter }}">
+                    <div class="from">
+                        <h3 class="heading">Your Bill With GST</h3>
+                        <p>Seller: {{i.storeName}}</p>                       
+                        <p>Phone Number:{{i.storePhone}}</p>
+            
+                    </div>
+                    <div class="to">
+                        <h4>Buyer</h4>
+                        <p>Name: {{i.customerName}}</p>
+                        <p>Mobile Number: {{i.customerPhone}}</p>
+                    </div>
+
+                    <div class="invoice">
+                        <p>Buyer</p>
+                    
+                        <p>Invoice Date: {{ i.created_at }}</p>
+                        <table>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Original Price</th>
+                                <th>GST Percentage</th>
+                                <th>Total</th>
+                            </tr>
+                            <tr>
+                                <td>{{ i.ProductName }}</td>
+                                <td>{{ i.Quantity }}</td>
+                                <td>{{ i.OrginalAmount }} Rs.</td>
+                                <td>{{ i.GST }} GST</td>
+                                <td style="color: red;">{{ i.Total }}</td>
+                            </tr>
+                        </table>
+                        <div class="sign">
+                            <h5>Signature</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="print-button" onclick="printDiv('recipt-{{ forloop.counter }}')">Print This Recipt</button> {% endfor %}
+            </div>
+
+            <script>
+                function printDiv(divId) {
+                    // Get the content of the div
+                    var divContent = document.getElementById(divId).innerHTML;
+
+                    // Create a new window
+                    var printWindow = window.open('', '', 'height=600,width=800');
+
+                    // Write the content to the new window
+                    
+                    printWindow.document.write('<style>body{font-family: Arial, sans-serif;}</style>'); // Add your styles here
+                    
+                    printWindow.document.write(divContent);
+                    
+
+                    // Close the document to ensure the content is fully loaded before printing
+                    printWindow.document.close();
+
+                    // Wait for the content to be fully loaded, then print
+                    printWindow.onload = function() {
+                        printWindow.focus(); // necessary for some browsers
+                        printWindow.print();
+                        printWindow.close();
+                    };
+                }
+            </script>
+    </main>
+
+
+</body>
+
+</html>

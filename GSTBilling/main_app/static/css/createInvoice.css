@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(img/createInvoice.jpg);
+    background-attachment: fixed;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.box_1 {
+    padding: 2px;
+    background-color: transparent;
+    border-radius: 10px;
+    /* width: 30%; */
+    /* background-color: ghostwhite; */
+    backdrop-filter: blur(2px);
+    /* border: 1px solid black; */
+}
+
+.box_2 {
+    padding: 70px;
+    background-color: transparent;
+    border-radius: 10px;
+    /* line-height: 40px; */
+}
+
+form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 25px;
+    font-family: "Satisfy", cursive;
+}
+
+form input {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #dae1f1;
+    background: #fff;
+    color: #545d7a;
+    /* width: 50%; */
+}
+
+form button {
+    border-radius: 5px;
+    background: #10182f;
+    color: #fff;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    padding: 10px 68px;
+    border: none;
+    margin-top: 30px;
+}
+
+.box_2 form * {
+    display: block;
+    /* width: 100%; */
+}
+
+.Home a {
+    text-decoration: none;
+    color: black;
+    margin-right: 4em;
+    font-family: "Caveat", cursive;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.Home a:hover {
+    text-decoration: underline;
+}
+
+.heading {
+    font-family: "Caveat", cursive;
+    margin-bottom: 1em;
+}
